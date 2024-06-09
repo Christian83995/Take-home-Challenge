@@ -1,0 +1,67 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+}
+
+.image-container {
+    display: flex;
+    gap: 1px;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 300px;
+    height: 650px;
+}
+
+.picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.image-wrapper:hover .picture {
+    filter: grayscale(100%) blur(4px); /* Effet de niveaux de gris et de flou */
+}
+
+.text {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    color: white;
+    transition: transform 0.2s;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 30px; /* Augmenter la taille du texte */
+}
+
+.subtitle {
+    margin-top: 5px;
+    font-size: 16px; /* Augmenter la taille du texte */
+    color: rgb(203, 200, 194);
+}
+
+.know-more {
+    margin-top: 10px;
+    color: skyblue;
+    opacity: 0;
+    transition: opacity 0.4s, transform 0.2s;
+    font-size: 18px; /* Augmenter la taille du texte */
+}
+
+.image-wrapper:hover .text {
+    transform: translateY(-20px);
+}
+
+.image-wrapper:hover .know-more {
+    opacity: 1;
+    transform: translateY(0);
+}
